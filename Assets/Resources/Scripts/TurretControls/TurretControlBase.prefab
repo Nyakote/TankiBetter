@@ -1,0 +1,297 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &711978166006423942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5211882253225566814}
+  - component: {fileID: 2949278112204053979}
+  - component: {fileID: 5144550187851610435}
+  - component: {fileID: 5457372536829401281}
+  - component: {fileID: 528008509120735033}
+  - component: {fileID: 2326454979429468386}
+  - component: {fileID: 6050833617943063540}
+  - component: {fileID: 76427516624964784}
+  - component: {fileID: 8618739374163992455}
+  - component: {fileID: 429638723885851814}
+  m_Layer: 0
+  m_Name: TurretControlBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5211882253225566814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.82049, y: 0.3066672, z: -44.84299}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2949278112204053979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5339ebdac52051a4886220c1c6c2c040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  rotationSpeed: 0
+  rotationAcceleration: 0
+  reload_time: 0
+  burn_damage: 0
+  min_damage_range: 0
+  max_damage_range: 0
+  energy_capacity: 0
+  energy_consumption: 0
+  weak_damage_percent: 0
+  cone_angle: 0
+--- !u!114 &5144550187851610435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235106e08b8587540bd0f953f548994c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  rotationSpeed: 0
+  rotationAcceleration: 0
+  reload_time: 0
+  min_damage_range: 0
+  max_damage_range: 0
+  energy_capacity: 0
+  freeze_duration: 0
+  energy_consumption: 0
+  weak_damage_percent: 0
+  cone_angle: 0
+--- !u!114 &5457372536829401281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90bb477e770b24f499c1944d168d0108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  rotationSpeed: 0
+  rotationAcceleration: 0
+  healing: 0
+  range: 0
+  self_healing_percent: 0
+  reload_time: 0
+  energy_capacity: 0
+  idle_energy_consumption: 0
+  attack_energy_consumption: 0
+  healing_energy_consumption: 0
+  cone_angle: 0
+--- !u!114 &528008509120735033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ff8d335309b9844800448b10bd7964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 0
+  maxDamage: 0
+  rotationSpeed: 0
+  rotationAcceleration: 0
+  impact_force: 0
+  recoil: 0
+  reload_time: 0
+  charge_time: 0
+  delay: 0
+  piercing_damage_percent: 0
+  auto_aim_up: 0
+  auto_aim_down: 0
+--- !u!114 &2326454979429468386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba32006b212c7a4c9fc9cd1df6d986b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 0
+  maxDamage: 0
+  rotationSpeed: 0
+  rotationAcceleration: 0
+  energy_per_shot: 0
+  min_damage_range: 0
+  max_damage_range: 0
+  projectile_speed: 0
+  impact_force: 0
+  recoil: 0
+  energy_capacity: 0
+  energy_recharge: 0
+  weak_damage_percent: 0
+  projectile_radius: 0
+  reload_time: 0
+  auto_aim_up: 0
+  auto_aim_down: 0
+  timeBetweenShots: 0.2
+  timepassed: 0
+--- !u!114 &6050833617943063540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375df051d88aa394aaf6000500764f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  scoped_min_damage: 0
+  scoped_max_damage: 0
+  arcade_min_damage: 0
+  arcade_max_damage: 0
+  arcade_impact_force: 0
+  scoped_impact_force: 0
+  recoil: 0
+  arcade_reload_time: 0
+  energy_consumption: 0
+  rotation_speed: 0
+  rotation_acceleration: 0
+  horizontal_aim_speed: 0
+  vertical_aim_speed: 0
+  energy_per_shot: 0
+  energy_recharge: 0
+  piercing_percent: 0
+  energy_capacity: 0
+  scoped_exit_delay: 0
+  scoped_entry_delay: 0
+  scoped_rotation_acceleration: 0
+  auto_aim_up: 0
+  auto_aim_down: 0
+  min_foliage_transparency_radius: 0
+  max_foliage_transparency_radius: 0
+  fov_min: 0
+  fov_max: 0
+  slowdown_start_point: 0
+  slowdown_end_point: 0
+  min_slowdown_factor: 0
+--- !u!114 &76427516624964784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4ff6457b1d6b347896f8da7fccfc7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  min_damage: 0
+  max_damage: 0
+  impact_force: 0
+  recoil: 0
+  reload_time: 0
+  rotation_speed: 0
+  critical_chance: 0
+  critical_damage: 0
+  min_damage_range: 0
+  max_damage_range: 0
+  weak_damage_percent: 0
+  auto_aim_up: 0
+  auto_aim_down: 0
+--- !u!114 &8618739374163992455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e18a803794aa674196eda12ddc3506a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 0
+  min_damage: 0
+  max_damage: 0
+  impact_force: 0
+  splash_impact_force: 0
+  recoil: 0
+  reload_time: 0
+  rotation_speed: 0
+  rotation_acceleration: 0
+  min_damage_range: 0
+  max_damage_range: 0
+  weak_damage_percent: 0
+  max_damage_radius: 0
+  min_damage_radius: 0
+  weak_damage_percent_splash: 0
+  auto_aim_up: 0
+  auto_aim_down: 0
+--- !u!114 &429638723885851814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711978166006423942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b31bd14ea8d9640abc32b73ad1b33a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretName: Twins
+  turretMod: 
+  price: 0
+  min_damage: 0
+  max_damage: 0
+  impact_force: 0
+  recoil: 0
+  rotation_speed: 0
+  rotation_acceleration: 0
+  min_damage_range: 0
+  projectile_speed: 0
+  weak_damage_percent: 0
+  reload_time: 0
+  max_damage_range: 0
+  projectile_radius: 0
+  auto_aim_up: 0
+  auto_aim_down: 0
+  timeBetweenShots: 0.2
+  timepassed: 0
+  RightC: {fileID: 0}
+  LeftC: {fileID: 0}

@@ -1,0 +1,80 @@
+{
+  "turret": [
+    {
+      "name": "Twins",
+      "type": "medium-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 350,
+          "min_damage": 8.8,
+          "max_damage": 10.5,
+          "impact_force": 97.83,
+          "recoil": 35.03,
+          "rotation_speed": 89.6,
+          "rotation_acceleration": 162.7,
+          "min_damage_range": 60.65,
+          "projectile_speed": 60.65,
+          "weak_damage_percent": 5.78,
+          "reload_time": 0.25,
+          "max_damage_range": 15,
+          "projectile_radius": 0.5
+        },
+        {
+          "mod": "M1",
+          "price": 21350,
+          "min_damage": 11.4,
+          "max_damage": 13.8,
+          "impact_force": 117.61,
+          "recoil": 39.79,
+          "rotation_speed": 103.9,
+          "rotation_acceleration": 181.1,
+          "min_damage_range": 65.22,
+          "projectile_speed": 65.22,
+          "weak_damage_percent": 10.3,
+          "reload_time": 0.25,
+          "max_damage_range": 15,
+          "projectile_radius": 0.5
+        },
+        {
+          "mod": "M2",
+          "price": 70300,
+          "min_damage": 14,
+          "max_damage": 17.2,
+          "impact_force": 137.39,
+          "recoil": 44.56,
+          "rotation_speed": 118.3,
+          "rotation_acceleration": 199.5,
+          "min_damage_range": 69.78,
+          "projectile_speed": 69.78,
+          "weak_damage_percent": 14.83,
+          "reload_time": 0.25,
+          "max_damage_range": 15,
+          "projectile_radius": 0.5
+        },
+        {
+          "mod": "M3",
+          "price": 188500,
+          "min_damage": 17,
+          "max_damage": 21,
+          "impact_force": 160.00,
+          "recoil": 50.00,
+          "rotation_speed": 134.6,
+          "rotation_acceleration": 220.6,
+          "min_damage_range": 75.00,
+          "projectile_speed": 75.00,
+          "weak_damage_percent": 20.0,
+          "reload_time": 0.25,
+          "max_damage_range": 15,
+          "projectile_radius": 0.5
+        }
+      ],
+      "fixeds": [
+        {
+          "auto_aim_up": 13,
+          "auto_aim_down": 16
+        }
+      ]
+    }
+  ]
+}

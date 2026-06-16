@@ -1,0 +1,76 @@
+{
+  "turret": [
+    {
+      "name": "Thunder",
+      "type": "medium-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 1450,
+          "min_damage": 42,
+          "max_damage": 68,
+          "impact_force": 169.3,
+          "splash_impact_force": 338.58,
+          "recoil": 138.82,
+          "reload_time": 3.153,
+          "rotation_speed": 77.0,
+          "rotation_acceleration": 111.7,
+          "min_damage_range": 113.85,
+          "max_damage_range": 56.93
+        },
+        {
+          "mod": "M1",
+          "price": 28100,
+          "min_damage": 55,
+          "max_damage": 83,
+          "impact_force": 217.4,
+          "splash_impact_force": 434.89,
+          "recoil": 187.35,
+          "reload_time": 2.912,
+          "rotation_speed": 94.6,
+          "rotation_acceleration": 129.7,
+          "min_damage_range": 123.49,
+          "max_damage_range": 61.75
+        },
+        {
+          "mod": "M2",
+          "price": 97000,
+          "min_damage": 68,
+          "max_damage": 99,
+          "impact_force": 265.6,
+          "splash_impact_force": 531.20,
+          "recoil": 209.41,
+          "reload_time": 2.672,
+          "rotation_speed": 112.3,
+          "rotation_acceleration": 147.6,
+          "min_damage_range": 133.12,
+          "max_damage_range": 66.56
+        },
+        {
+          "mod": "M3",
+          "price": 242500,
+          "min_damage": 78,
+          "max_damage": 110,
+          "impact_force": 300.0,
+          "splash_impact_force": 600.0,
+          "recoil": 227.06,
+          "reload_time": 2.5,
+          "rotation_speed": 124.9,
+          "rotation_acceleration": 160.4,
+          "min_damage_range": 140.0,
+          "max_damage_range": 70.0
+        }
+      ],
+      "fixeds": [
+        {
+          "weak_damage_percent": 50,
+          "max_damage_radius": 0,
+          "min_damage_radius": 12,
+          "weak_damage_percent_splash": 25,
+          "auto_aim_up": 9,
+          "auto_aim_down": 12
+        }
+      ]
+    }
+  ]
+}

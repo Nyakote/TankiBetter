@@ -1,0 +1,72 @@
+{
+  "turret": [
+    {
+      "name": "Railgun",
+      "type": "long-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 800,
+          "min_damage": 68,
+          "max_damage": 106,
+          "impact_force": 369.58,
+          "recoil": 213.80,
+          "rotation_speed": 56.2,
+          "rotation_acceleration": 69.6,
+          "reload_time": 7.006,
+          "charge_time": 5.846,
+          "delay": 1.160,
+          "piercing_damage_percent": 35.4
+        },
+        {
+          "mod": "M1",
+          "price": 17600,
+          "min_damage": 90,
+          "max_damage": 137,
+          "impact_force": 479.72,
+          "recoil": 242.53,
+          "rotation_speed": 70.0,
+          "rotation_acceleration": 80.0,
+          "reload_time": 6.504,
+          "charge_time": 5.377,
+          "delay": 1.127,
+          "piercing_damage_percent": 56.9
+        },
+        {
+          "mod": "M2",
+          "price": 79200,
+          "min_damage": 111,
+          "max_damage": 168,
+          "impact_force": 589.86,
+          "recoil": 271.27,
+          "rotation_speed": 78.5,
+          "rotation_acceleration": 90.4,
+          "reload_time": 6.002,
+          "charge_time": 4.909,
+          "delay": 1.093,
+          "piercing_damage_percent": 78.4
+        },
+        {
+          "mod": "M3",
+          "price": 199300,
+          "min_damage": 133,
+          "max_damage": 199,
+          "impact_force": 700.0,
+          "recoil": 300.0,
+          "rotation_speed": 97.4,
+          "rotation_acceleration": 100.84,
+          "reload_time": 5.500,
+          "charge_time": 4.440,
+          "delay": 1.060,
+          "piercing_damage_percent": 100.0
+        }
+      ],
+      "fixeds": [
+        {
+          "auto_aim_up": 6,
+          "auto_aim_down": 9
+        }
+      ]
+    }
+  ]
+}

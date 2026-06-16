@@ -1,0 +1,80 @@
+{
+  "turret": [
+    {
+      "name": "Ricochet",
+      "type": "medium-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 1700,
+          "min_damage": 19,
+          "max_damage": 23,
+          "impact_force": 164.25,
+          "recoil": 155.81,
+          "reload_time": 0.565,
+          "energy_per_shot": 133.71,
+          "rotation_speed": 91.3,
+          "rotation_acceleration": 77.6,
+          "min_damage_range": 81.06,
+          "max_damage_range": 67.38,
+          "projectile_speed": 94.75
+        },
+        {
+          "mod": "M1",
+          "price": 33350,
+          "min_damage": 24,
+          "max_damage": 29,
+          "impact_force": 193.71,
+          "recoil": 172.99,
+          "reload_time": 0.528,
+          "energy_per_shot": 127.99,
+          "rotation_speed": 110.2,
+          "rotation_acceleration": 100.2,
+          "min_damage_range": 88.43,
+          "max_damage_range": 72.29,
+          "projectile_speed": 104.57
+        },
+        {
+          "mod": "M2",
+          "price": 105900,
+          "min_damage": 29,
+          "max_damage": 35,
+          "impact_force": 223.17,
+          "recoil": 191.80,
+          "reload_time": 0.491,
+          "energy_per_shot": 122.27,
+          "rotation_speed": 129.0,
+          "rotation_acceleration": 122.9,
+          "min_damage_range": 95.79,
+          "max_damage_range": 77.19,
+          "projectile_speed": 114.39
+        },
+        {
+          "mod": "M3",
+          "price": 264200,
+          "min_damage": 32,
+          "max_damage": 38,
+          "impact_force": 240.00,
+          "recoil": 200.00,
+          "reload_time": 0.470,
+          "energy_per_shot": 119.00,
+          "rotation_speed": 139.8,
+          "rotation_acceleration": 135.8,
+          "min_damage_range": 100.00,
+          "max_damage_range": 80.00,
+          "projectile_speed": 120.00
+        }
+      ],
+      "fixeds": [
+        {
+          "energy_capacity": 1000,
+          "energy_recharge": 100,
+          "weak_damage_percent": 0,
+          "projectile_radius": 0.5,
+          "auto_aim_up": 15,
+          "auto_aim_down": 18
+        }
+      ]
+    }
+  ]
+}

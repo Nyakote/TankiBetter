@@ -1,0 +1,60 @@
+{
+  "turret": [
+    {
+      "name": "Freeze",
+      "type": "short-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 1450,
+          "damage": 51,
+          "rotation_speed": 125.1,
+          "rotation_acceleration": 197.9,
+          "reload_time": 13.48,
+          "min_damage_range": 24.75,
+          "max_damage_range": 5
+        },
+        {
+          "mod": "M1",
+          "price": 28100,
+          "damage": 64,
+          "rotation_speed": 151.2,
+          "rotation_acceleration": 218.7,
+          "reload_time": 12.57,
+          "min_damage_range": 26.68,
+          "max_damage_range": 5
+        },
+        {
+          "mod": "M2",
+          "price": 97100,
+          "damage": 77,
+          "rotation_speed": 177.3,
+          "rotation_acceleration": 239.5,
+          "reload_time": 11.65,
+          "min_damage_range": 28.62,
+          "max_damage_range": 5
+        },
+        {
+          "mod": "M3",
+          "price": 253300,
+          "damage": 86,
+          "rotation_speed": 196.0,
+          "rotation_acceleration": 254.3,
+          "reload_time": 11.00,
+          "min_damage_range": 30.00,
+          "max_damage_range": 5
+        }
+      ],
+      "fixeds": [
+        {
+          "freeze_duration": 1000,
+          "energy_capacity;": 1000,
+          "energy_consumption": 111,
+          "weak_damage_percent": 30,
+          "enerhy_capacity": 1000,
+          "cone_angle": 20
+        }
+      ]
+    }
+  ]
+}

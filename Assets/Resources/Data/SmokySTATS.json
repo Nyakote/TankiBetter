@@ -1,0 +1,73 @@
+{
+  "turret": [
+    {
+      "name": "Smoky",
+      "type": "medium-caliber",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 0,
+          "min_damage": 22,
+          "max_damage": 28,
+          "impact_force": 175.00,
+          "recoil": 140.43,
+          "reload_time": 1.848,
+          "rotation_speed": 71.5,
+          "critical_chance": 8,
+          "critical_damage": 50,
+          "min_damage_range": 133.04,
+          "max_damage_range": 44.35
+        },
+        {
+          "mod": "M1",
+          "price": 7100,
+          "min_damage": 29,
+          "max_damage": 37,
+          "impact_force": 222.17,
+          "recoil": 173.78,
+          "reload_time": 1.681,
+          "rotation_speed": 87,
+          "critical_chance": 12,
+          "critical_damage": 65,
+          "min_damage_range": 147.33,
+          "max_damage_range": 49.11
+        },
+        {
+          "mod": "M2",
+          "price": 61400,
+          "min_damage": 35,
+          "max_damage": 45,
+          "impact_force": 269.35,
+          "recoil": 207.12,
+          "reload_time": 1.514,
+          "rotation_speed": 102.6,
+          "critical_chance": 15,
+          "critical_damage": 80,
+          "min_damage_range": 161.62,
+          "max_damage_range": 53.88
+        },
+        {
+          "mod": "M3",
+          "price": 177700,
+          "min_damage": 44,
+          "max_damage": 56,
+          "impact_force": 330.00,
+          "recoil": 250.00,
+          "reload_time": 1.3,
+          "rotation_speed": 122.6,
+          "critical_chance": 20,
+          "critical_damage": 100,
+          "min_damage_range": 180.00,
+          "max_damage_range": 60.00
+        }
+      ],
+      "fixeds": [
+        {
+          "weak_damage_percent": 10,
+          "auto_aim_up": 9,
+          "auto_aim_down": 12
+        }
+      ]
+    }
+  ]
+}

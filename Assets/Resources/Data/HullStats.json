@@ -1,0 +1,263 @@
+{
+  "hull": [
+    {
+      "name": "Wasp",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 94,
+          "SPD": 10.8,
+          "ROTSPD": 93.9,
+          "WEIGHT": 1376,
+          "PWR": 940
+        },
+        {
+          "tier": "M1",
+          "HP": 121,
+          "SPD": 11.5,
+          "ROTSPD": 111.7,
+          "WEIGHT": 1638,
+          "PWR": 1060
+        },
+        {
+          "tier": "M2",
+          "HP": 149,
+          "SPD": 12.2,
+          "ROTSPD": 129.6,
+          "WEIGHT": 1901,
+          "PWR": 1170
+        },
+        {
+          "tier": "M3",
+          "HP": 180,
+          "SPD": 13.0,
+          "ROTSPD": 150.0,
+          "WEIGHT": 2200,
+          "PWR": 1300
+        }
+      ]
+    },
+    {
+      "name": "Hornet",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 122,
+          "SPD": 10.0,
+          "ROTSPD": 90.8,
+          "WEIGHT": 1616,
+          "PWR": 1040
+        },
+        {
+          "tier": "M1",
+          "HP": 154,
+          "SPD": 10.7,
+          "ROTSPD": 105.2,
+          "WEIGHT": 1905,
+          "PWR": 1170
+        },
+        {
+          "tier": "M2",
+          "HP": 187,
+          "SPD": 11.5,
+          "ROTSPD": 119.7,
+          "WEIGHT": 2194,
+          "PWR": 1310
+        },
+        {
+          "tier": "M3",
+          "HP": 210,
+          "SPD": 12.0,
+          "ROTSPD": 130.0,
+          "WEIGHT": 2400,
+          "PWR": 1400
+        }
+      ]
+    },
+    {
+      "name": "Hunter",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 144,
+          "SPD": 8.0,
+          "ROTSPD": 75.8,
+          "WEIGHT": 1965,
+          "PWR": 960
+        },
+        {
+          "tier": "M1",
+          "HP": 187,
+          "SPD": 8.6,
+          "ROTSPD": 95.3,
+          "WEIGHT": 2280,
+          "PWR": 1100
+        },
+        {
+          "tier": "M2",
+          "HP": 230,
+          "SPD": 9.2,
+          "ROTSPD": 114.9,
+          "WEIGHT": 2595,
+          "PWR": 1230
+        },
+        {
+          "tier": "M3",
+          "HP": 285,
+          "SPD": 10.0,
+          "ROTSPD": 140.0,
+          "WEIGHT": 3000,
+          "PWR": 1400
+        }
+      ]
+    },
+    {
+      "name": "Dictator",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 188,
+          "SPD": 7.0,
+          "ROTSPD": 89.0,
+          "WEIGHT": 2410,
+          "PWR": 1090
+        },
+        {
+          "tier": "M1",
+          "HP": 243,
+          "SPD": 7.3,
+          "ROTSPD": 103.3,
+          "WEIGHT": 2722,
+          "PWR": 1230
+        },
+        {
+          "tier": "M2",
+          "HP": 298,
+          "SPD": 7.7,
+          "ROTSPD": 117.7,
+          "WEIGHT": 3033,
+          "PWR": 1380
+        },
+        {
+          "tier": "M3",
+          "HP": 345,
+          "SPD": 8.0,
+          "ROTSPD": 130.0,
+          "WEIGHT": 3300,
+          "PWR": 1500
+        }
+      ]
+    },
+    {
+      "name": "Viking",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 195,
+          "SPD": 7.8,
+          "ROTSPD": 80.6,
+          "WEIGHT": 2235,
+          "PWR": 1150
+        },
+        {
+          "tier": "M1",
+          "HP": 244,
+          "SPD": 8.3,
+          "ROTSPD": 92.7,
+          "WEIGHT": 2550,
+          "PWR": 1260
+        },
+        {
+          "tier": "M2",
+          "HP": 294,
+          "SPD": 8.8,
+          "ROTSPD": 104.8,
+          "WEIGHT": 2865,
+          "PWR": 1440
+        },
+        {
+          "tier": "M3",
+          "HP": 315,
+          "SPD": 9.0,
+          "ROTSPD": 110.0,
+          "WEIGHT": 3000,
+          "PWR": 1500
+        }
+      ]
+    },
+    {
+      "name": "Titan",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 224,
+          "SPD": 5.3,
+          "ROTSPD": 55.7,
+          "WEIGHT": 3571,
+          "PWR": 1170
+        },
+        {
+          "tier": "M1",
+          "HP": 289,
+          "SPD": 5.5,
+          "ROTSPD": 67.1,
+          "WEIGHT": 4047,
+          "PWR": 1310
+        },
+        {
+          "tier": "M2",
+          "HP": 355,
+          "SPD": 5.8,
+          "ROTSPD": 78.6,
+          "WEIGHT": 4524,
+          "PWR": 1460
+        },
+        {
+          "tier": "M3",
+          "HP": 420,
+          "SPD": 6.0,
+          "ROTSPD": 90.0,
+          "WEIGHT": 5000,
+          "PWR": 1600
+        }
+      ]
+    },
+    {
+      "name": "Mammoth",
+      "mod": [
+        {
+          "tier": "M0",
+          "HP": 297,
+          "SPD": 4.4,
+          "ROTSPD": 54.0,
+          "WEIGHT": 4262,
+          "PWR": 1130
+        },
+        {
+          "tier": "M1",
+          "HP": 376,
+          "SPD": 4.6,
+          "ROTSPD": 64.1,
+          "WEIGHT": 4743,
+          "PWR": 1270
+        },
+        {
+          "tier": "M2",
+          "HP": 455,
+          "SPD": 4.9,
+          "ROTSPD": 74.2,
+          "WEIGHT": 5225,
+          "PWR": 1420
+        },
+        {
+          "tier": "M3",
+          "HP": 500,
+          "SPD": 5.0,
+          "ROTSPD": 80.0,
+          "WEIGHT": 5500,
+          "PWR": 1500
+        }
+      ]
+    }
+  ]
+}

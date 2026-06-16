@@ -1,0 +1,63 @@
+{
+  "turret": [
+    {
+      "name": "Isida",
+      "type": "short-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 1250,
+          "healing": 20,
+          "damage": 40,
+          "self_healing_percent": 35.97,
+          "rotation_speed": 91.7,
+          "rotation_acceleration": 165.1,
+          "reload_time": 11.11,
+          "range": 16.78
+        },
+        {
+          "mod": "M1",
+          "price": 22850,
+          "healing": 25,
+          "damage": 50,
+          "self_healing_percent": 40.88,
+          "rotation_speed": 106.7,
+          "rotation_acceleration": 184.6,
+          "reload_time": 10.37,
+          "range": 18.61
+        },
+        {
+          "mod": "M2",
+          "price": 88100,
+          "healing": 31,
+          "damage": 61,
+          "self_healing_percent": 45.79,
+          "rotation_speed": 121.8,
+          "rotation_acceleration": 203.6,
+          "reload_time": 9.63,
+          "range": 20.43
+        },
+        {
+          "mod": "M3",
+          "price": 221000,
+          "healing": 35,
+          "damage": 70,
+          "self_healing_percent": 50.0,
+          "rotation_speed": 134.7,
+          "rotation_acceleration": 220.5,
+          "reload_time": 9.00,
+          "range": 22.00
+        }
+      ],
+      "fixeds": [
+        {
+          "energy_capacity": 1000,
+          "idle_energy_consumption": 83.3,
+          "attack_energy_consumption": 142.0,
+          "healing_energy_consumption": 83.3,
+          "cone_angle": 20
+        }
+      ]
+    }
+  ]
+}

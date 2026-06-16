@@ -1,0 +1,107 @@
+{
+  "turret": [
+    {
+      "name": "Shaft",
+      "type": "long-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 1900,
+          "scoped_min_damage": 61,
+          "scoped_max_damage": 187,
+          "arcade_min_damage": 55,
+          "arcade_max_damage": 68,
+          "arcade_impact_force": 199.74,
+          "scoped_impact_force": 503.96,
+          "recoil": 228.95,
+          "arcade_reload_time": 3.590,
+          "energy_consumption": 254.4,
+          "rotation_speed": 75.0,
+          "rotation_acceleration": 91.2,
+          "horizontal_aim_speed": 18.16,
+          "vertical_aim_speed": 9.08,
+          "energy_per_shot": 295.52,
+          "energy_recharge": 124.08,
+          "piercing_percent": 36.3
+        },
+        {
+          "mod": "M1",
+          "price": 38600,
+          "scoped_min_damage": 76,
+          "scoped_max_damage": 235,
+          "arcade_min_damage": 69,
+          "arcade_max_damage": 83,
+          "arcade_impact_force": 253.38,
+          "scoped_impact_force": 625.86,
+          "recoil": 258.21,
+          "arcade_reload_time": 3.350,
+          "energy_consumption": 286.9,
+          "rotation_speed": 91.1,
+          "rotation_acceleration": 104.6,
+          "horizontal_aim_speed": 23.03,
+          "vertical_aim_speed": 11.52,
+          "energy_per_shot": 280.9,
+          "energy_recharge": 126.52,
+          "piercing_percent": 46.1
+        },
+        {
+          "mod": "M2",
+          "price": 114800,
+          "scoped_min_damage": 91,
+          "scoped_max_damage": 282,
+          "arcade_min_damage": 84,
+          "arcade_max_damage": 99,
+          "arcade_impact_force": 307.01,
+          "scoped_impact_force": 747.76,
+          "recoil": 287.46,
+          "arcade_reload_time": 3.100,
+          "energy_consumption": 319.4,
+          "rotation_speed": 107.2,
+          "rotation_acceleration": 118.0,
+          "horizontal_aim_speed": 27.91,
+          "vertical_aim_speed": 13.96,
+          "energy_per_shot": 266.27,
+          "energy_recharge": 128.96,
+          "piercing_percent": 55.8
+        },
+        {
+          "mod": "M3",
+          "price": 275000,
+          "scoped_min_damage": 98,
+          "scoped_max_damage": 302,
+          "arcade_min_damage": 90,
+          "arcade_max_damage": 106,
+          "arcade_impact_force": 330.00,
+          "scoped_impact_force": 800.00,
+          "recoil": 300.00,
+          "arcade_reload_time": 3.000,
+          "energy_consumption": 333.33,
+          "rotation_speed": 114.1,
+          "rotation_acceleration": 123.8,
+          "horizontal_aim_speed": 30.00,
+          "vertical_aim_speed": 15.00,
+          "energy_per_shot": 260.00,
+          "energy_recharge": 130.00,
+          "piercing_percent": 60.0
+        }
+      ],
+      "fixeds": [
+        {
+          "energy_capacity": 1000,
+          "scoped_exit_delay": 0.5,
+          "scoped_entry_delay": 0.5,
+          "scoped_rotation_acceleration": 27,
+          "auto_aim_up": 12,
+          "auto_aim_down": 15,
+          "min_foliage_transparency_radius": 20,
+          "max_foliage_transparency_radius": 80,
+          "fov_min": 40,
+          "fov_max": 23,
+          "slowdown_start_point": 0,
+          "slowdown_end_point": 0.95,
+          "min_slowdown_factor": 1
+        }
+      ]
+    }
+  ]
+}

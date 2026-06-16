@@ -1,0 +1,62 @@
+{
+  "turret": [
+    {
+      "name": "Firebird",
+      "type": "short-range",
+      "mods": [
+        {
+          "mod": "M0",
+          "price": 150,
+          "damage": 41,
+          "rotation_speed": 95.3,
+          "rotation_acceleration": 169.5,
+          "reload_time": 12.00,
+          "burn_damage": 9.4,
+          "min_damage_range": 23.7,
+          "max_damage_range": 5
+        },
+        {
+          "mod": "M1",
+          "price": 7100,
+          "damage": 50,
+          "rotation_speed": 116.9,
+          "rotation_acceleration": 190.1,
+          "reload_time": 11.39,
+          "burn_damage": 15.9,
+          "min_damage_range": 25.6,
+          "max_damage_range": 5
+        },
+        {
+          "mod": "M2",
+          "price": 61400,
+          "damage": 60,
+          "rotation_speed": 138.4,
+          "rotation_acceleration": 210.7,
+          "reload_time": 10.78,
+          "burn_damage": 22.8,
+          "min_damage_range": 27.5,
+          "max_damage_range": 5
+        },
+        {
+          "mod": "M3",
+          "price": 177700,
+          "damage": 72,
+          "rotation_speed": 166.2,
+          "rotation_acceleration": 237.2,
+          "reload_time": 10.00,
+          "burn_damage": 31.2,
+          "min_damage_range": 30,
+          "max_damage_range": 5
+        }
+      ],
+      "fixeds": [
+        {
+          "energy_capacity": 1000,
+          "energy_consumption": 180,
+          "weak_damage_percent": 30,
+          "cone_angle": 20
+        }
+      ]
+    }
+  ]
+}
