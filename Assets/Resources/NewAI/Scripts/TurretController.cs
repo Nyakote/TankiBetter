@@ -36,7 +36,7 @@ public class TurretController : MonoBehaviour
     public List<Transform> muzzle = new List<Transform>();
 
     public Transform particleSystemTransform;
-
+    LayerMask mapMask;
     private bool didSpot = false;
     private bool isShooting = false;
 
@@ -120,7 +120,9 @@ public class TurretController : MonoBehaviour
 
         if (IsInAttackRange(currentTarget) && Quaternion.Angle(transform.localRotation, desiredRotation) < 10f)
         {
-            Attack(currentTarget);
+            if (!(Physics.Linecast(muzzle[0].position, currentTarget, mapMask))){ 
+                Attack(currentTarget);
+            }
         }
     }
 
@@ -262,7 +264,7 @@ private void TurretCooldown()
         minDamage = turretControl.MinDamage();
         maxDamage = turretControl.MaxDamage();
         timeBetweenShots = turretControl.TimeBetweenShots();
-        
+        mapMask = LayerMask.GetMask("Map");
         isInitialized = true;
     }
 }

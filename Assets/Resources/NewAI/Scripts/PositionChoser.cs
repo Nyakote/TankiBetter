@@ -8,15 +8,16 @@ public class PositionChoser : MonoBehaviour
 {
     [Header("Temp")]
     float timer;
-    [SerializeField] private float sideWidth = 200f;
+    [SerializeField] private float sideWidth = 2000f;
     float thisTimeWidth = 0f;
-    [SerializeField] private float navMeshSearchRadius = 100f;
+    [SerializeField] private float navMeshSearchRadius = 10f;
 
-    float checktime = 5f;
+
+    Vector3 anchor;
+    float checktime = 0.75f;
     float checktimer;
-    private float anotherchecktime = 0.5f;
-    float anotherchecktimer, radius, sideOffset;
 
+    public float radius, sideOffset;
     public float initializationTime = 3f;
     public float detectionRadius = 800f;
 
@@ -26,10 +27,21 @@ public class PositionChoser : MonoBehaviour
 
     private LayerMask enemyLayer;
 
+    private bool isAnchorSet;
+    public bool isReachedPreviousPos = true;
+    float angleOfTerritory = 30f;
+    float timeToReach = 10f;
+    float timerToReach;
+    float randomAngle;
+    float randomRadius;
+    LayerMask mapMask;
+
     NavMeshAgent navMeshAgent;
     HullController hullController;
     TurretController turretController;
-
+    float counter = 0;
+    float keepclosedistance = 10f;
+    float keepTimer;
     
     void Awake()
     {
@@ -44,47 +56,105 @@ public class PositionChoser : MonoBehaviour
     {
         if (Time.time - timer >= initializationTime)
         {
-            if (checktimer == 0)
+            hullController = GetComponentInChildren<HullController>();
+            turretController = GetComponentInChildren<TurretController>();
+            DetectEnemy();
+            if (currentTarget != null)
             {
-                thisTimeWidth = UnityEngine.Random.Range(0, sideWidth);
-                radius = UnityEngine.Random.Range(minDistance, maxDistance);
-                Debug.Log(thisTimeWidth + " " + radius);
-                checktimer = checktime;
+                if (Vector3.Distance(currentTarget.position, anchor) < minDistance || Vector3.Distance(currentTarget.position, anchor) > maxDistance) {isAnchorSet = false; isReachedPreviousPos=true;}
+                if (Vector3.Distance(hullController.transform.position, navMeshAgent.destination) < 5f) isReachedPreviousPos = true;
+                if (timerToReach >= timeToReach) { isReachedPreviousPos = true; timerToReach = 0; }
+            }
+            if (isAnchorSet)
+            {
+                if (checktimer != 0) { checktimer -= Time.deltaTime; if (checktimer < 0) checktimer = 0; }
+                else
+                {
+                    randomAngle = UnityEngine.Random.Range(-angleOfTerritory, angleOfTerritory);
+                    randomRadius = UnityEngine.Random.Range(0f, maxDistance/2);
+                    checktimer = checktime;
+                }
+                KeepPositionUntil();
             }
             else
-            {
-                checktimer -= Time.deltaTime;
-                if (checktimer <= 0) checktimer = 0;
-            }
-
-            if (anotherchecktimer == 0)
             {
                 if (currentTarget != null)
+                {
+                    if (counter >= 3) { radius = minDistance; keepTimer = keepclosedistance; counter = 0; }
+                    
+                    if(keepTimer != 0)
+                    {
+                        keepTimer -= Time.deltaTime;
+                        if (keepTimer < 0) keepTimer = 0;
+                    }
+                    else
+                    {
+                        thisTimeWidth = UnityEngine.Random.Range(0, sideWidth);
+                        radius = UnityEngine.Random.Range(minDistance, maxDistance);
+                    }
                     GetDesiredPosition();
+                }
                 else
                     GetRandomPose();
-                anotherchecktimer = anotherchecktime;
             }
-            else
+
+            hullController.SetAgent(navMeshAgent);
+            if (currentTarget != null && turretController != null)
             {
-                anotherchecktimer -= Time.deltaTime;
-                if (anotherchecktimer <= 0) anotherchecktimer = 0;
+                turretController.TurretToPlayer(currentTarget.position);
             }
-            DetectEnemy();
-            hullController = GetComponentInChildren<HullController>();
-            hullController.HullMovement(navMeshAgent);
-            turretController = GetComponentInChildren<TurretController>();
-            turretController.TurretToPlayer(currentTarget.position);
             navMeshAgent.nextPosition = hullController.transform.position;
             navMeshAgent.radius = hullController.transform.localScale.z+1.5f;
-
+            timerToReach += Time.deltaTime;
         }
 
-     /*   if (currentTarget != null)
-        {
-            Debug.DrawLine(transform.position, currentTarget.position, Color.green);
-        }*/
         
+    }
+
+    private void KeepPositionUntil()
+    {
+        if (!isReachedPreviousPos) return;
+        if (currentTarget == null) return;
+
+        for (int i = 0; i < 15; i++)
+        {
+            randomAngle = UnityEngine.Random.Range(-angleOfTerritory, angleOfTerritory);
+            randomRadius = UnityEngine.Random.Range(0f, maxDistance);
+
+            Vector3 forward = anchor - currentTarget.position;
+            forward.y = 0f;
+
+            if (forward.sqrMagnitude < 0.01f)
+                forward = transform.forward;
+
+            forward.Normalize();
+
+            Vector3 keepDirection = Quaternion.Euler(0f, randomAngle, 0f) * forward;
+            Vector3 newTerritoryPos = anchor + keepDirection * randomRadius;
+
+            if (!NavMesh.SamplePosition(newTerritoryPos, out NavMeshHit hit, 10f, NavMesh.AllAreas))
+                continue;
+
+            Vector3 from = hit.position + Vector3.up * 2f;
+            Vector3 to = currentTarget.position + Vector3.up * 2f;
+            
+            if (Vector3.Distance(hullController.transform.position, currentTarget.position) < maxDistance)
+            {
+                if (Physics.Linecast(from, to, mapMask))
+                {
+                    counter+=Time.deltaTime;
+                    continue;
+                }
+            }
+            navMeshAgent.SetDestination(hit.position);
+
+            isReachedPreviousPos = false;
+            timerToReach = 0f;
+
+            return;
+        }
+
+        isReachedPreviousPos = true;
     }
 
     private void GetDesiredPosition()
@@ -92,8 +162,7 @@ public class PositionChoser : MonoBehaviour
         if (currentTarget == null)
             return;
 
-       
-        sideOffset = UnityEngine.Random.Range(-thisTimeWidth / 2f, thisTimeWidth / 2f);
+        sideOffset = UnityEngine.Random.Range(-thisTimeWidth, thisTimeWidth);
 
         Vector3 directionFromTarget = transform.position - currentTarget.position;
         directionFromTarget.y = 0f;
@@ -109,7 +178,8 @@ public class PositionChoser : MonoBehaviour
 
         if (NavMesh.SamplePosition(desiredPosition, out NavMeshHit hit, navMeshSearchRadius, NavMesh.AllAreas))
         {
-            navMeshAgent.SetDestination(hit.position);
+            anchor = hit.position;
+            isAnchorSet = true;
         }
     }
 
@@ -156,6 +226,7 @@ public class PositionChoser : MonoBehaviour
         enemyLayer = layer;
         minDistance = data.MinDistance;
         maxDistance = data.MaxDistance;
+        mapMask = LayerMask.GetMask("Map");
     }
 
 

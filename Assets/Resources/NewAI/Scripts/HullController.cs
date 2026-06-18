@@ -8,12 +8,12 @@ using Unity.AI.Navigation;
 public class HullController : MonoBehaviour
 {
 
-     float turnTorque = 80000f;
+    float turnTorque = 200000f;
     [SerializeField] float turnDamping = 1000f;
-    [SerializeField] float maxAngularSpeed = 2.5f;
-    [SerializeField] float minTurnAngle = 2f;
-    [SerializeField] float brakePower = 80000f;
-    float minTurnPower = 0.6f;
+    [SerializeField] float maxAngularSpeed = 3f;
+    [SerializeField] float minTurnAngle = 0.5f;
+    [SerializeField] float brakePower = 120000f;
+    float minTurnPower = 0.8f;
 
     [Header("References")]
     HullStatsLoader HSL;
@@ -36,23 +36,32 @@ public class HullController : MonoBehaviour
     public float rotationSpeed;
     public float weight;
     public float power;
+    private NavMeshAgent navMeshAgent;
 
     void Awake()
     {
         ReferencesSetterer();
     }
 
+  
+
+    public void SetAgent(NavMeshAgent agent)
+    {
+        navMeshAgent = agent;
+    }
+
     private void FixedUpdate()
     {
         LimitSpeed();
-    }
 
-    public void HullMovement(NavMeshAgent navMeshAgent)
-    {
+        if (navMeshAgent == null)
+            return;
+
         SpeedOnAnglesRipper(navMeshAgent);
         AccelerationController(navMeshAgent);
         TurningController(navMeshAgent);
     }
+
 
     private void AccelerationController(NavMeshAgent navMeshAgent)
     {
@@ -95,7 +104,7 @@ public class HullController : MonoBehaviour
             turnDirection *= -1f;
 
         float angle01 = Mathf.Clamp01(absAngle / 90f);
-        float turnPowerByAngle = Mathf.Lerp(minTurnPower,1f,Mathf.Sin(angle01 * Mathf.PI * 0.5f));
+        float turnPowerByAngle = Mathf.Lerp(minTurnPower, 1f, Mathf.Sin(angle01 * Mathf.PI * 0.2f));
         Vector3 flatVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         float speed01 = Mathf.Clamp01(flatVelocity.magnitude / maxSpeed);
         float speedTurnMultiplier = Mathf.Lerp(1f, 0.35f, speed01);

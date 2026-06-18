@@ -7,10 +7,10 @@ public class EnemyAINew : MonoBehaviour
     Dictionary<string, int> turretRanges = new Dictionary<string, int>(){
     { "Firebird", 20 },
     { "Freeze", 20 },
-    { "Twins", 60 },
-    { "Ricochet", 60 },
-    { "Smoky", 80 },
-    { "Thunder", 80 },
+    { "Twins", 80 },
+    { "Ricochet", 80 },
+    { "Smoky", 150 },
+    { "Thunder", 150 },
     { "Railgun", 150 },
     { "Shaft", 150 }
 };
